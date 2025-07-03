@@ -61,11 +61,11 @@ ggplot(data = paises) +
 ```
 
 ```{r}
-# Gráfico de dispersión de PIB per capita vs esperanza de vida al nacer
-
 #| label: grafico-02
 #| warning: false
 #| message: false
+# Gráfico de dispersión de PIB per capita vs esperanza de vida al nacer
+
 
 paises |> 
   ggplot(aes(x = GDP_PC, y = LIFE_EXPECTANCY))+
@@ -77,12 +77,14 @@ paises |>
 ```
 
 ```{r}
-# Gráfico de dispersión de PIB per capita vs esperanza de vida al nacer con colores por continente
-
-
 #| label: grafico-03
 #| warning: false
 #| message: false
+
+
+# Gráfico de dispersión de PIB per capita vs esperanza de vida al nacer con colores por continente
+
+
 
 paises |> 
   ggplot(aes(x = GDP_PC, y = LIFE_EXPECTANCY, color=CONTINENT))+
@@ -92,12 +94,14 @@ paises |>
 ```
 
 ```{r}
-# Gráfico de dispersión de PIB per capita vs esperanza de vida al nacer con formas por continente
-
-
 #| label: grafico-04
 #| warning: false
 #| message: false
+
+# Gráfico de dispersión de PIB per capita vs esperanza de vida al nacer con formas por continente
+
+
+
 
 paises |> 
   ggplot(aes(x = GDP_PC, y = LIFE_EXPECTANCY, shape=CONTINENT))+
@@ -108,12 +112,13 @@ paises |>
 ```
 
 ```{r}
-# Gráfico de dispersión de PIB per capita vs esperanza de vida al nacer con formas por continente
-
-
 #| label: grafico-05
 #| warning: false
 #| message: false
+
+# Gráfico de dispersión de PIB per capita vs esperanza de vida al nacer con formas por continente
+
+
 
 paises |> 
   ggplot(aes(x = GDP_PC, y = LIFE_EXPECTANCY, shape=CONTINENT, color=CONTINENT))+
@@ -127,12 +132,13 @@ paises |>
 ```
 
 ```{r}
-# Gráfico de dispersión de PIB per capita vs esperanza de vida al nacer con formas por continente
-
-
 #| label: grafico-06
 #| warning: false
 #| message: false
+# Gráfico de dispersión de PIB per capita vs esperanza de vida al nacer con formas por continente
+
+
+
 
 paises |> 
   ggplot(aes(x = GDP_PC, y = LIFE_EXPECTANCY, size=POP_EST, shape=CONTINENT, color=CONTINENT))+
@@ -144,12 +150,11 @@ paises |>
 ```
 
 ```{r}
-# Gráfico de dispersión de PIB per capita vs esperanza de vida al nacer con formas por continente
-
-
 #| label: grafico-07
 #| warning: false
 #| message: false
+ 
+# Gráfico de dispersión de PIB per capita vs esperanza de vida al nacer con formas por continente
 
 paises |> 
   ggplot(aes(x = GDP_PC, y = LIFE_EXPECTANCY))+
@@ -161,12 +166,12 @@ paises |>
 ```
 
 ```{r}
-# Gráfico de dispersión de PIB per capita vs esperanza de vida al nacer con formas por continente
-
-
 #| label: grafico-08
 #| warning: false
 #| message: false
+
+# Gráfico de dispersión de PIB per capita vs esperanza de vida al nacer con formas por continente
+
 
 paises |> 
   ggplot(aes(x = GDP_PC, y = LIFE_EXPECTANCY))+
@@ -179,13 +184,15 @@ paises |>
 ## PANELES
 
 ```{r}
+#| label: grafico-09
+#| warning: false
+#| message: false
+
 # Gráfico de dispersión de PIB per capita vs esperanza de vida al nacer con formas por continente
 # paneles en función del continente
 
 
-#| label: grafico-09
-#| warning: false
-#| message: false
+
 
 paises |> 
   ggplot(aes(x = GDP_PC, y = LIFE_EXPECTANCY))+
@@ -196,12 +203,11 @@ paises |>
 ```
 
 ```{r}
-# paneles en función de los ingresos y por continente
-
-
 #| label: grafico-10
 #| warning: false
 #| message: false
+
+# paneles en función de los ingresos y por continente
 
 paises |> 
   ggplot(aes(x = GDP_PC, y = LIFE_EXPECTANCY))+
@@ -213,13 +219,14 @@ paises |>
 ## Títulos, etiquetas, estilos y colores
 
 ```{r}
+#| label: grafico-11
+#| warning: false
+#| message: false
+
 # Gráfico de dispersión de PIB per cápita vs esperanza de vida al nacer
 # en África y Europa coloreado por continente
 # + curva de tendencia
 
-#| label: grafico-11
-#| warning: false
-#| message: false
 
 paises |>
   filter(CONTINENT == 'Africa' | CONTINENT == 'Europe') |>
@@ -239,13 +246,13 @@ paises |>
 ## Estilos (*themes*)
 
 ```{r}
-# Gráfico de dispersión de PIB per cápita vs esperanza de vida al nacer
-# en África y Europa coloreado por continente
-# + curva de tendencia
-
 #| label: grafico-12
 #| warning: false
 #| message: false
+
+# Gráfico de dispersión de PIB per cápita vs esperanza de vida al nacer
+# en África y Europa coloreado por continente
+# + curva de tendencia
 
 paises |>
   filter(CONTINENT == 'Africa' | CONTINENT == 'Europe') |>
@@ -264,13 +271,14 @@ paises |>
 ```
 
 ```{r}
+#| label: grafico-13
+#| warning: false
+#| message: false
+
 # Gráfico de dispersión de PIB per cápita vs esperanza de vida al nacer
 # en África y Europa coloreado por continente
 # + curva de tendencia
 
-#| label: grafico-13
-#| warning: false
-#| message: false
 
 paises |>
   filter(CONTINENT == 'Africa' | CONTINENT == 'Europe') |>
@@ -289,12 +297,13 @@ paises |>
 ```
 
 ```{r}
-# Gráfico de dispersión de PIB per cápita vs esperanza de vida al nacer
-#  coloreado por continente
-
 #| label: grafico-14
 #| warning: false
 #| message: false
+
+# Gráfico de dispersión de PIB per cápita vs esperanza de vida al nacer
+#  coloreado por continente
+
 
 paises |>
   ggplot(aes(x = GDP_PC, y = LIFE_EXPECTANCY, color = CONTINENT)) +
